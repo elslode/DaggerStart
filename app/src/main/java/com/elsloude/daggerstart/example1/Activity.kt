@@ -11,6 +11,7 @@ class Activity {
     @Inject
     lateinit var monitor: Monitor
     @Inject
+
     lateinit var mouse: Mouse
     @Inject
     lateinit var keyboard: Keyboard
