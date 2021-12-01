@@ -1,12 +1,21 @@
 package com.elsloude.daggerstart.example1
 
+import javax.inject.Inject
+
 class Activity {
 
-    lateinit var computer: Computer
+//    val keyboard: Keyboard = DaggerNewComponent.create().getKeyboard()
+//    val mouse: Mouse = DaggerNewComponent.create().getMouse()
+//    val monitor: Monitor = DaggerNewComponent.create().getMonitor()
+
+    @Inject
+    lateinit var monitor: Monitor
+    @Inject
+    lateinit var mouse: Mouse
+    @Inject
     lateinit var keyboard: Keyboard
 
     init {
-        Component().inject(this)
+        DaggerNewComponent.create().inject(this)
     }
-
 }
