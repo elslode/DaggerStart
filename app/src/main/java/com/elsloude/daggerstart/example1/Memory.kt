@@ -1,4 +1,6 @@
 package com.elsloude.daggerstart.example1
 
-class Memory {
+import javax.inject.Inject
+
+class Memory{
 }

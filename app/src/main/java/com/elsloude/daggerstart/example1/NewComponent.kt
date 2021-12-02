@@ -1,16 +1,11 @@
 package com.elsloude.daggerstart.example1
 
 import dagger.Component
+import dagger.Module
 import javax.inject.Inject
 
-@Component
+@Component(modules = [ComputerModule::class])
 interface NewComponent {
 
-    fun getKeyboard(): Keyboard
-    fun getMouse(): Mouse
-    fun getMonitor(): Monitor
-
     fun inject(activity: Activity)
-
-
 }
